@@ -5,7 +5,7 @@ server:
 message: Hello from prod
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/cust_prod
+    url: jdbc:postgresql://localhost:5432/cust_prod
     username: root
     password: 
   jpa:
