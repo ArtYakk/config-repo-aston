@@ -6,8 +6,8 @@ message: Hello from order prod
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/order_prod
-    username: root
-    password: 
+    username: postgres
+    password: postgres
   jpa:
     hibernate:
       ddl-auto: update
