@@ -12,17 +12,7 @@ spring:
         spring:
           json:
             trusted:
-              packages: "com.artemyakkonen.core"
-  cloud:
-    openfeign:
-      circuitbreaker:
-        enabled: true
-      client:
-        config:
-          default:
-            connect-timeout: 5000
-            read-timeout: 10000
-            logger-level: basic            
+              packages: "com.artemyakkonen.core"      
 
 resilience4j:
   circuitbreaker:
