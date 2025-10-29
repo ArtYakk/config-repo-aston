@@ -35,7 +35,16 @@ resilience4j:
         failureRateThreshold: 50
         waitDurationInOpenState: 10s
         permittedNumberOfCallsInHalfOpenState: 2
-        automaticTransitionFromOpenToHalfOpenEnabled: true   
+        automaticTransitionFromOpenToHalfOpenEnabled: true  
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+  health:
+    circuitbreakers:
+      enabled: true        
 
 logging:
   level:
