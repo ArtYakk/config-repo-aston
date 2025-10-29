@@ -7,47 +7,4 @@ spring:
   jpa:
     hibernate:
       ddl-auto: none
-    show-sql: false
-  cloud:
-    openfeign:
-      circuitbreaker:
-        enabled: true
-      client:
-        config:
-          default:
-            connect-timeout: 5000
-            read-timeout: 10000
-            logger-level: basic
-
-resilience4j:
-  circuitbreaker:
-    configs:
-      default:
-        sliding-window-size: 10
-        sliding-window-type: COUNT_BASED
-        minimum-number-of-calls: 5
-        failure-rate-threshold: 50
-        wait-duration-in-open-state: 10s
-        permitted-number-of-calls-in-half-open-state: 3
-        automatic-transition-from-open-to-half-open-enabled: true
-    instances:
-      userService:
-        base-config: default
-  timelimiter:
-    configs:
-      default:
-        timeout-duration: 5s
-    instances:
-      emailService:
-        base-config: default
-  retry:
-    configs:
-      default:
-        max-attempts: 3
-        wait-duration: 1s
-    instances:
-      emailService:
-        base-config: default
-
-#    org.springframework.cloud.openfeign: DEBUG
-#    io.github.resilience4j: DEBUG        
+    show-sql: false  
