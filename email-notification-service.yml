@@ -6,7 +6,7 @@ spring:
     name: email-notification-service
   kafka:
     consumer:
-      bootstrap-servers: localhost:9092,localhost:9094
+      bootstrap-servers: kafka-1:9092,kafka-2:9094
 #      group-id: user-events
       properties:
         spring:
